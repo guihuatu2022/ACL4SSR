@@ -31,18 +31,16 @@ dns:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
   fallback:
-    - https://1.1.1.1/dns-query#PROXY
-    - https://8.8.8.8/dns-query#PROXY
-    - tls://1.1.1.1:853#PROXY
-    - tls://8.8.8.8:853#PROXY
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+    - tls://1.1.1.1:853
+    - tls://8.8.8.8:853
   fallback-filter:
     geoip: true
     geoip-code: CN
     ipcidr:
       - 240.0.0.0/4
       - 0.0.0.0/8
-  nameserver-policy:
-    'geosite:cn': https://doh.pub/dns-query
 
 proxies: ~
 
